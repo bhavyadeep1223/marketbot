@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MarketBot</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <h2>MarketBot</h2>
+    <p class="subtitle">Indian Market Dashboard</p>
+
+    <div class="live-feed">
+      <h4>Live Updates</h4>
+      <div id="liveFeedList"></div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="top-bar">
+      <input type="text" id="symbolInput" placeholder="Search Stock (e.g. TCS)">
+      <button onclick="handleSearch()">Search</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <h4>Live Price</h4>
+        <p id="livePrice">--</p>
+      </div>
+
+      <div class="stat-card">
+        <h4>Change</h4>
+        <p id="priceChange">--</p>
+      </div>
+
+      <div class="stat-card">
+        <h4>Volume</h4>
+        <p id="volume">--</p>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="stockChart"></canvas>
+    </div>
+
+    <!-- CHAT MOVED BELOW CHART -->
+    <div class="chat-panel">
+      <h4>Market Assistant</h4>
+      <div id="chatBox" class="chat-box">
+        <div class="bot-msg">👋 Welcome to MarketBot</div>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<div id="popup" class="popup"></div>
+
+<div class="bubbles">
+  <span></span><span></span><span></span>
+  <span></span><span></span><span></span>
+  <span></span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
